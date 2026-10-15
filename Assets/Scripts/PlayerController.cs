@@ -1,27 +1,33 @@
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
-    public float jumpForce;
-    public CheckGround checkGround;
 
+    bool isGrounded = true;
+    public float speed;
+    public float jumpForce; 
+    public CheckGround checkGround;
+    
+
+    public Transform playerPosition;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidBody;
     private Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
-        /* Sabiendo la función de este método
-        genere las instrucciones necesarias...
-        */
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        checkMove();
+        checkJump();
     }
 
     void FixedUpdate()
@@ -31,17 +37,20 @@ public class PlayerController : MonoBehaviour
 
     private void checkMove()
     {
-        /* Genere el código para que el jugador se mueva...
-        añada las animaciones pertinentes
-        */
-        
+        if (Input.GetKeyDown(KeyCode.A)){
+            
+        }
+        if (Input.GetKeyDown(KeyCode.D)){
+            
+        }
     }    
     
     private void checkJump()
     {
-        /* Genere el código para que el jugador salte...
-        añada las animaciones pertinentes
-        */
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            
+        }
     }
 
     public void impulse(float impulse)

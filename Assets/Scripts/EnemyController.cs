@@ -39,9 +39,7 @@ public class EnemyController : MonoBehaviour
 
     public void destroyEnemy()
     {
-        /*
-        Este método destruye el objeto del enemigo
-        */
+        
     }
 
 
